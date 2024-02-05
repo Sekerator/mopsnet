@@ -11,3 +11,5 @@ jobs:
         run: echo $PWD
       - name: pwd
         run: pwd
+      - name: Echo Test
+        run: test
