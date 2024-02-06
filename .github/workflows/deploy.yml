@@ -1,0 +1,35 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Copy files to VPS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          source: ./
+          target: /var/www/html/
+
+      - name: SSH into VPS and restart web server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            # Restart your web server (e.g., Nginx or Apache)
+            sudo service nginx restart
