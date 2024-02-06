@@ -23,7 +23,7 @@ jobs:
           source: ./
           target: /var/www/html/
 
-      - name: Set permissions and restart web server
+      - name: Set permissions
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -32,4 +32,3 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             chmod -R 777 /var/www/html/
-            sudo service nginx restart
