@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 
-$this->title = 'My Yii Application';
+$this->title = 'My Yii Application МОПС';
 
 ?>
 <script>
@@ -40,7 +40,7 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron text-center bg-transparent">
-        <h1 class="display-4">Congratulations!</h1>
+        <h1 class="display-4">Congratulations МОПС!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
