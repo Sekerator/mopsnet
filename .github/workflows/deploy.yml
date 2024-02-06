@@ -31,5 +31,5 @@ jobs:
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            # Restart your web server (e.g., Nginx or Apache)!
+            # Restart your web server (e.g., Nginx or Apache)
             sudo service nginx restart
