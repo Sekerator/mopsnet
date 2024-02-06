@@ -23,10 +23,7 @@ jobs:
           source: ./
           target: /var/www/html/
 
-      - name: Set permissions on VPS
-        run: ssh -i ${{ secrets.VPS_PRIVATE_KEY }} ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} -p ${{ secrets.VPS_PORT }} 'chmod -R 777 /var/www/html/'
-
-      - name: SSH into VPS and restart web server
+      - name: Set permissions and restart web server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -34,5 +31,5 @@ jobs:
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            # Restart your web server (e.g., Nginx or Apache)!
+            chmod -R 777 /var/www/html/
             sudo service nginx restart
