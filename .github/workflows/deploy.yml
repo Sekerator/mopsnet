@@ -32,3 +32,15 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             chmod -R 777 /var/www/html/
+
+      - name: Run PHP Yii migrate
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cd /var/www/html/
+            composer install
+            php yii migrate
