@@ -42,5 +42,5 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             cd /var/www/html/
-            composer install
+            COMPOSER_ALLOW_SUPERUSER=1 composer install
             php yii migrate
