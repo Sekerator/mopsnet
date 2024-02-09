@@ -43,7 +43,7 @@ of Simple CSS Waves-->
 
 <!--Content starts-->
 <div class="content flex">
-    <div>
+    <div style="width: 100%">
         <div>
             <!-- Hero -->
             <section class="et-hero-tabs">
