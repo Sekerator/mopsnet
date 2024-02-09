@@ -42,7 +42,114 @@ of Simple CSS Waves-->
 <!--Header ends-->
 
 <!--Content starts-->
-<div class="content flex">
-    <p>Что то там </p>
+<div class="content flex" style="margin-top: 100px;">
+    <div>
+        <div>
+            <!-- Hero -->
+            <section class="et-hero-tabs">
+                <h1>Проекты</h1>
+                <h3>Проекты в разработке которых участвовал MopsNET</h3>
+                <div class="et-hero-tabs-container">
+                    <a class="et-hero-tab" href="#tab-es6">Маркетплейс</a>
+                    <a class="et-hero-tab" href="#tab-flexbox">Медиа</a>
+                    <a class="et-hero-tab" href="#tab-react">Сайты компаний</a>
+                    <a class="et-hero-tab" href="#tab-angular">Сайты залов</a>
+                    <a class="et-hero-tab" href="#tab-other">Другие</a>
+                    <span class="et-hero-tab-slider"></span>
+                </div>
+            </section>
+
+            <!-- Main -->
+            <main class="et-main">
+                <section class="et-slide" id="tab-es6">
+                    <h1>Маркетплейс</h1>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/unona-project.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/unona-project2.png" height="200px">
+                        </div>
+                    </div>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/unona-project3.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/unona-project4.png" height="200px">
+                        </div>
+                    </div>
+
+                </section>
+                <section class="et-slide" id="tab-flexbox">
+                    <h1>Медиа</h1>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/media.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/media2.png" height="200px">
+                        </div>
+                    </div>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/media3.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/media4.png" height="200px">
+                        </div>
+                    </div>
+                </section>
+                <section class="et-slide" id="tab-react">
+                    <h1>Сайты компаний</h1>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/gallery.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/gallery2.png" height="200px">
+                        </div>
+                    </div>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/gallery3.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/gallery4.png" height="200px">
+                        </div>
+                    </div>
+                </section>
+                <section class="et-slide" id="tab-angular">
+                    <h1>Сайты залов</h1>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/wc.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/wc2.png" height="200px">
+                        </div>
+                    </div>
+                    <div class="flex" style="margin-top: 100px">
+                        <div class="col-10">
+                            <img src="/frontend/web/images/wc3.png" height="200px">
+                        </div>
+                        <div class="col-10">
+                            <img src="/frontend/web/images/wc4.png" height="200px">
+                        </div>
+                    </div>
+                </section>
+                <section class="et-slide" id="tab-other">
+                    <h1>Другие</h1>
+                    <h3>Множество других проектов, в том числе интеграции с 1C, создание отчетов и тд.</h3>
+                </section>
+            </main>
+        </div>
+        <h1>Мои проекты</h1>
+        <h1>Мои проекты</h1>
+        <h1>Мои проекты</h1>
+        <h1>Мои проекты</h1>
+        <h1>Мои проекты</h1>
+
+    </div>
 </div>
 <!--Content ends-->

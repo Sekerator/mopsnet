@@ -1,6 +1,7 @@
 <?php
 
 /** @var \yii\web\View $this */
+
 /** @var string $content */
 
 use common\widgets\Alert;
@@ -13,75 +14,103 @@ use yii\bootstrap4\NavBar;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" class="h-100">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>" class="h-100">
+        <head>
 
-    <?php if (!YII_DEBUG): ?>
-        <!-- Yandex.Metrika counter -->
-        <script type="text/javascript" >
-            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                m[i].l=1*new Date();
-                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            <meta charset="<?= Yii::$app->charset ?>">
+            <?php $this->registerCsrfMetaTags() ?>
+            <title><?= Html::encode($this->title) ?></title>
+            <?php $this->head() ?>
 
-            ym(94647972, "init", {
-                clickmap:true,
-                trackLinks:true,
-                accurateTrackBounce:true,
-                webvisor:true,
-                trackHash:true
-            });
-        </script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/94647972" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-        <!-- /Yandex.Metrika counter -->
+            <?php if (!YII_DEBUG): ?>
+                <!-- Yandex.Metrika counter -->
+                <script type="text/javascript">
+                    (function (m, e, t, r, i, k, a) {
+                        m[i] = m[i] || function () {
+                            (m[i].a = m[i].a || []).push(arguments)
+                        };
+                        m[i].l = 1 * new Date();
+                        for (var j = 0; j < document.scripts.length; j++) {
+                            if (document.scripts[j].src === r) {
+                                return;
+                            }
+                        }
+                        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+                    })
+                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        <!-- Varioqub experiments -->
-        <script type="text/javascript">
-            (function(e, x, pe, r, i, me, nt){
-                e[i]=e[i]||function(){(e[i].a=e[i].a||[]).push(arguments)},
-                    me=x.createElement(pe),me.async=1,me.src=r,nt=x.getElementsByTagName(pe)[0],nt.parentNode.insertBefore(me,nt)})
-            (window, document, 'script', 'https://abt.s3.yandex.net/expjs/latest/exp.js', 'ymab');
-            ymab('metrika.94647972', 'init'/*, {clientFeatures}, {callback}*/);
-        </script>
+                    ym(94647972, "init", {
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true,
+                        trackHash: true
+                    });
+                </script>
+                <noscript>
+                    <div><img src="https://mc.yandex.ru/watch/94647972" style="position:absolute; left:-9999px;" alt=""/>
+                    </div>
+                </noscript>
+                <!-- /Yandex.Metrika counter -->
 
-        <!-- Top.Mail.Ru counter -->
-        <script type="text/javascript">
-            var _tmr = window._tmr || (window._tmr = []);
-            _tmr.push({id: "3385443", type: "pageView", start: (new Date()).getTime()});
-            (function (d, w, id) {
-                if (d.getElementById(id)) return;
-                var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-                ts.src = "https://top-fwz1.mail.ru/js/code.js";
-                var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-                if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-            })(document, window, "tmr-code");
-        </script>
-        <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3385443;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
-        <!-- /Top.Mail.Ru counter -->
-    <?php endif; ?>
+                <!-- Varioqub experiments -->
+                <script type="text/javascript">
+                    (function (e, x, pe, r, i, me, nt) {
+                        e[i] = e[i] || function () {
+                            (e[i].a = e[i].a || []).push(arguments)
+                        },
+                            me = x.createElement(pe), me.async = 1, me.src = r, nt = x.getElementsByTagName(pe)[0], nt.parentNode.insertBefore(me, nt)
+                    })
+                    (window, document, 'script', 'https://abt.s3.yandex.net/expjs/latest/exp.js', 'ymab');
+                    ymab('metrika.94647972', 'init'/*, {clientFeatures}, {callback}*/);
+                </script>
 
-</head>
-<body class="d-flex flex-column h-100">
-<?php $this->beginBody() ?>
+                <!-- Top.Mail.Ru counter -->
+                <script type="text/javascript">
+                    var _tmr = window._tmr || (window._tmr = []);
+                    _tmr.push({id: "3385443", type: "pageView", start: (new Date()).getTime()});
+                    (function (d, w, id) {
+                        if (d.getElementById(id)) return;
+                        var ts = d.createElement("script");
+                        ts.type = "text/javascript";
+                        ts.async = true;
+                        ts.id = id;
+                        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+                        var f = function () {
+                            var s = d.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(ts, s);
+                        };
+                        if (w.opera == "[object Opera]") {
+                            d.addEventListener("DOMContentLoaded", f, false);
+                        } else {
+                            f();
+                        }
+                    })(document, window, "tmr-code");
+                </script>
+                <noscript>
+                    <div><img src="https://top-fwz1.mail.ru/counter?id=3385443;js=na"
+                              style="position:absolute;left:-9999px;" alt="Top.Mail.Ru"/></div>
+                </noscript>
+                <!-- /Top.Mail.Ru counter -->
+            <?php endif; ?>
 
-<main role="main" class="flex-shrink-0">
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</main>
+        </head>
+        <body class="d-flex flex-column h-100">
+        <?php $this->beginBody() ?>
 
-<?php $this->endBody() ?>
-</body>
-</html>
+        <main role="main" class="flex-shrink-0">
+            <div class="container">
+                <?= Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ]) ?>
+                <?= Alert::widget() ?>
+                <?= $content ?>
+            </div>
+        </main>
+
+        <?php $this->endBody() ?>
+
+        </body>
+    </html>
 <?php $this->endPage();
