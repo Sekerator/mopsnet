@@ -88,3 +88,28 @@ a {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 800px) {
+    .et-hero-tabs {
+        height: 60vh;
+    }
+
+    .et-slide {
+        height: auto;
+        margin-top: 30%;
+        margin-bottom: 20%;
+    }
+
+    .project-slide {
+        flex-direction: column;
+    }
+
+    .project-slide-image-div {
+        margin-top: 50px;
+    }
+
+    .project-slide-image {
+        width: 100%;
+        height: auto;
+    }
+}
