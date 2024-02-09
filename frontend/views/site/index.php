@@ -42,7 +42,7 @@ of Simple CSS Waves-->
 <!--Header ends-->
 
 <!--Content starts-->
-<div class="content flex" style="margin-top: 100px;">
+<div class="content flex">
     <div>
         <div>
             <!-- Hero -->
