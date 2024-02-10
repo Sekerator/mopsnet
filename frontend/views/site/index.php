@@ -63,78 +63,86 @@ of Simple CSS Waves-->
             <main class="et-main">
                 <section class="et-slide" id="tab-es6">
                     <h1>Маркетплейс</h1>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/unona-project.png" height="200px">
+                    <div class="project-slide-images">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project2.png" height="200px">
+                            </div>
                         </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/unona-project2.png" height="200px">
-                        </div>
-                    </div>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/unona-project3.png" height="200px">
-                        </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/unona-project4.png" height="200px">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project3.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project4.png" height="200px">
+                            </div>
                         </div>
                     </div>
 
                 </section>
                 <section class="et-slide" id="tab-flexbox">
                     <h1>Медиа</h1>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/media.png" height="200px">
+                    <div class="project-slide-images">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/media.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/media2.png" height="200px">
+                            </div>
                         </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/media2.png" height="200px">
-                        </div>
-                    </div>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/media3.png" height="200px">
-                        </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/media4.png" height="200px">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/media3.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/media4.png" height="200px">
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="et-slide" id="tab-react">
                     <h1>Сайты компаний</h1>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/gallery.png" height="200px">
+                    <div class="project-slide-images">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery2.png" height="200px">
+                            </div>
                         </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/gallery2.png" height="200px">
-                        </div>
-                    </div>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/gallery3.png" height="200px">
-                        </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/gallery4.png" height="200px">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery3.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery4.png" height="200px">
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="et-slide" id="tab-angular">
                     <h1>Сайты залов</h1>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/wc.png" height="200px">
+                    <div class="project-slide-images">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/wc.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/wc2.png" height="200px">
+                            </div>
                         </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/wc2.png" height="200px">
-                        </div>
-                    </div>
-                    <div class="project-slide flex" style="margin-top: 100px">
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/wc3.png" height="200px">
-                        </div>
-                        <div class="project-slide-image-div col-10">
-                            <img class="project-slide-image" src="/frontend/web/images/wc4.png" height="200px">
+                        <div class="project-slide flex">
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/wc3.png" height="200px">
+                            </div>
+                            <div class="project-slide-image-div col-10">
+                                <img class="project-slide-image" src="/frontend/web/images/wc4.png" height="200px">
+                            </div>
                         </div>
                     </div>
                 </section>

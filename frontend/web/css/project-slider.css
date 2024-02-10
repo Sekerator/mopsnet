@@ -75,7 +75,7 @@ a {
     transition: left 0.3s ease;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     .et-hero-tabs h1 {
         font-size: 3rem;
     }
@@ -102,7 +102,7 @@ a {
 
     .et-slide {
         height: auto;
-        margin-top: 30%;
+        margin-top: 20%;
         margin-bottom: 20%;
     }
 
@@ -111,7 +111,11 @@ a {
     }
 
     .project-slide-image-div {
-        margin-top: 50px;
+        margin-top: 10%;
+    }
+
+    .project-slide-images{
+        margin-top: 10%;
     }
 
     .project-slide-image {
