@@ -22,7 +22,7 @@ AppAsset::register($this);
             <meta property="og:url" content="https://mopsnet.ru">
             <meta property="og:title" content="MopsNET">
             <meta property="og:description" content="Разработка сайтов и приложений">
-            <meta property="og:image" content="<?= Url::base() ?>/images/logo.svg">
+            <meta property="og:image" content="<?= Url::base() ?>/images/media3.png">
 
             <meta name="viewport" content="width=device-width, initial-scale=0.99">
             <meta charset="<?= Yii::$app->charset ?>">
