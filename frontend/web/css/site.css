@@ -95,12 +95,6 @@ p {
     }
 }
 
-@media (max-width: 800px) {
-    .inner-header {
-        height: 45vh;
-    }
-}
-
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
     .waves {
@@ -108,6 +102,15 @@ p {
         min-height:40px;
     }
     h1 {
-        font-size:24px;
+        font-size:20px;
+    }
+    h3 {
+        font-size:15px;
+    }
+    h5 {
+        font-size:10px;
+    }
+    .inner-header {
+        height: 45vh;
     }
 }
