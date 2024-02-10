@@ -91,6 +91,9 @@ p {
     animation-delay: -5s;
     animation-duration: 20s;
 }
+.contact-image {
+    height: 50px;
+}
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px,0,0);
@@ -117,6 +120,9 @@ p {
     }
     .inner-header {
         height: 45vh;
+    }
+    .contact-image {
+        height: 30px;
     }
 }
 

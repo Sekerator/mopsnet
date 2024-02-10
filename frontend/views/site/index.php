@@ -152,6 +152,36 @@ of Simple CSS Waves-->
                 </section>
             </main>
         </div>
+
+        <div class="header">
+            <div style="transform: rotate(180deg)">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+            <div class="inner-header flex">
+                <!--Just the logo.. Don't mind this-->
+                <img class="logo-image" src="/frontend/web/images/logo.svg">
+                <div>
+                    <h1 style="color: black">MopsNET</h1>
+                    <h5>Телефон: <a href="tel:+79057953968" style="color: white">+79057953968</a></h5>
+                    <h5>Почта: <a href="mailto:mopsnet@bk.ru" style="color: white">mopsnet@bk.ru</a></h5>
+                </div>
+                <div class="flex" style="flex-direction: column; margin-left: 20px">
+                    <a href="https://vk.com/a.eynullaev"><img class="contact-image" src="/frontend/web/images/vk.png"></a>
+                    <a href="https://t.me/Sekerator" style="margin-top: 15px"><img class="contact-image" src="/frontend/web/images/tg.png"></a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
