@@ -28,6 +28,11 @@ p {
     background: linear-gradient(349deg, rgba(41,41,41,1) 0%, rgba(175,175,175,1) 100%);
     color:white;
 }
+
+.logo-image {
+    width: 10%;
+}
+
 .logo {
     width:50px;
     fill:white;
@@ -96,7 +101,7 @@ p {
 }
 
 /*Shrinking for mobile*/
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .waves {
         height:40px;
         min-height:40px;
@@ -112,5 +117,11 @@ p {
     }
     .inner-header {
         height: 45vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .logo-image {
+        width: 20%;
     }
 }

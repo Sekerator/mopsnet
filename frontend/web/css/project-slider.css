@@ -62,7 +62,7 @@ a {
 
 .et-hero-tab:hover {
     color: white;
-    background: rgba(102, 177, 241, 0.8);
+    background: rgb(102, 104, 241);
     transition: all 0.5s ease;
 }
 
@@ -75,23 +75,26 @@ a {
     transition: left 0.3s ease;
 }
 
+.project-slide-images{
+    margin-top: 10%;
+}
+
 @media (min-width: 900px) {
     .et-hero-tabs h1 {
         font-size: 3rem;
     }
 
     .et-hero-tabs h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .et-hero-tab {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1440px) {
     .et-hero-tab {
-        font-size: 0.5rem;
         padding: 5px;
         word-break: break-word;
     }
@@ -121,5 +124,11 @@ a {
     .project-slide-image {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .et-hero-tab {
+        font-size: 0.8rem;
     }
 }
