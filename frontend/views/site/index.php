@@ -65,19 +65,19 @@ of Simple CSS Waves-->
                     <h1>Маркетплейс</h1>
                     <div class="project-slide-images">
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/unona-project.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/unona-project2.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project2.png">
                             </div>
                         </div>
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/unona-project3.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project3.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/unona-project4.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/unona-project4.png">
                             </div>
                         </div>
                     </div>
@@ -87,19 +87,19 @@ of Simple CSS Waves-->
                     <h1>Медиа</h1>
                     <div class="project-slide-images">
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/media.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/media.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/media2.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/media2.png">
                             </div>
                         </div>
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/media3.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/media3.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/media4.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/media4.png">
                             </div>
                         </div>
                     </div>
@@ -108,19 +108,19 @@ of Simple CSS Waves-->
                     <h1>Сайты компаний</h1>
                     <div class="project-slide-images">
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/gallery.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/gallery2.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery2.png">
                             </div>
                         </div>
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/gallery3.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery3.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/gallery4.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/gallery4.png">
                             </div>
                         </div>
                     </div>
@@ -129,19 +129,19 @@ of Simple CSS Waves-->
                     <h1>Сайты залов</h1>
                     <div class="project-slide-images">
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/wc.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/wc.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/wc2.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/wc2.png">
                             </div>
                         </div>
                         <div class="project-slide flex">
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/wc3.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/wc3.png">
                             </div>
-                            <div class="project-slide-image-div col-10">
-                                <img class="project-slide-image" src="/frontend/web/images/wc4.png" height="200px">
+                            <div class="project-slide-image-div col">
+                                <img class="project-slide-image" src="/frontend/web/images/wc4.png">
                             </div>
                         </div>
                     </div>
