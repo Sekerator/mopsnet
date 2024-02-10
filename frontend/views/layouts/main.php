@@ -10,6 +10,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -17,11 +18,18 @@ AppAsset::register($this);
     <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>" class="h-100">
         <head>
+            <meta property="og:type" content="website">
+            <meta property="og:url" content="https://mopsnet.ru">
+            <meta property="og:title" content="MopsNET">
+            <meta property="og:description" content="Разработка сайтов и приложений">
+            <meta property="og:image" content="https://mopsnet.ru/frontend/web/images/logo.svg">
+
             <meta name="viewport" content="width=device-width, initial-scale=0.99">
             <meta charset="<?= Yii::$app->charset ?>">
             <?php $this->registerCsrfMetaTags() ?>
             <title><?= Html::encode($this->title) ?></title>
             <?php $this->head() ?>
+            <link rel="shortcut icon" href="<?= Url::base() ?>/images/logo.svg" type="image/x-icon">
 
             <?php if (!YII_DEBUG): ?>
                 <!-- Yandex.Metrika counter -->
