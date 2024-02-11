@@ -1,9 +1,6 @@
 <IfModule mod_rewrite.c>
     Options +FollowSymlinks
     RewriteEngine On
-    RewriteCond %{HTTPS} off [OR]
-    RewriteCond %{HTTP_HOST} !^www\. [NC]
-    RewriteRule ^ https://www.mopsnet.ru%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 <IfModule mod_rewrite.c>
