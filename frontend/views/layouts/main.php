@@ -19,7 +19,7 @@ AppAsset::register($this);
     <html lang="<?= Yii::$app->language ?>" class="h-100">
         <head>
             <meta name="yandex-verification" content="8763efc20d08d512" />
-            <meta name="google-site-verification" content="1S4kL8Hbxg3BXkMsFCl_6dnFuRRlqNmTkGiyL6w5vek" />
+            <meta name="google-site-verification" content="UTRL483Sm-pchNyJIGdlBKqSf4oISXKsJzDR0utvUDM" />
             <meta property="og:type" content="website">
             <meta property="og:url" content="https://mopsnet.ru">
             <meta property="og:title" content="MopsNET">
