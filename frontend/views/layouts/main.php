@@ -34,6 +34,17 @@ AppAsset::register($this);
             <link rel="shortcut icon" href="<?= Url::base() ?>/images/logo.svg" type="image/x-icon">
 
             <?php if (!YII_DEBUG): ?>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-91H4Z5BDK8"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-91H4Z5BDK8');
+                </script>
+
+
                 <!-- Yandex.Metrika counter -->
                 <script type="text/javascript">
                     (function (m, e, t, r, i, k, a) {
