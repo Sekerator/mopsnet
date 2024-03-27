@@ -13,15 +13,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Copy files to VPS
-        uses: ./actions-runner/appleboy/scp-action@v0.1.4
+      - name: Deploy theme on server
+        id: deploy_theme
+        uses: Pendect/action-rsyncer@v1.1.0
+        env:
+          DEPLOY_KEY: ${{ secrets.VPS_PRIVATE_KEY }}
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.VPS_PRIVATE_KEY }}
-          port: ${{ secrets.VPS_PORT }}
-          source: ./
-          target: /var/www/html/
+          flags: '-avc --delete'
+          src: './'
+          dest: '${{ secrets.VPS_USERNAME }}@"${{ secrets.VPS_HOST }}":/var/www/html/'
+
+#      - name: Copy files to VPS
+#        uses: ./actions-runner/appleboy/scp-action@v0.1.4
+#        with:
+#          host: ${{ secrets.VPS_HOST }}
+#          username: ${{ secrets.VPS_USERNAME }}
+#          key: ${{ secrets.VPS_PRIVATE_KEY }}
+#          port: ${{ secrets.VPS_PORT }}
+#          source: ./
+#          target: /var/www/html/
 
       - name: Set permissions
         uses: appleboy/ssh-action@v0.1.5
