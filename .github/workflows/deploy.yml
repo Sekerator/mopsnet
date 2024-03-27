@@ -13,12 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Download action
-        run: |
-          git clone https://github.com/appleboy/scp-action.git actions/appleboy/scp-action
-
       - name: Copy files to VPS
-        uses: appleboy/scp-action@v0.1.4
+        uses: @actions-runner/appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
