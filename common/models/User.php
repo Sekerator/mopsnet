@@ -89,7 +89,7 @@ class User extends ActiveRecord implements IdentityInterface
                 'username' => $username,
                 'auth_key' => Yii::$app->security->generateRandomString(),
                 'password_hash' => Yii::$app->security->generateRandomString(),
-                'email' => 'mopsnet@bk.ru',
+                'email' => Yii::$app->security->generateRandomString() . '@bk.ru',
                 'status' => self::STATUS_ACTIVE
             ]);
 
