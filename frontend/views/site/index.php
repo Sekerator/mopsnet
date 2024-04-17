@@ -16,7 +16,7 @@ of Simple CSS Waves-->
         <!--Just the logo.. Don't mind this-->
         <img class="logo-image" src="/frontend/web/images/logo.svg">
         <div>
-            <h1 style="color: black">MopsNET</h1>
+            <h1 style="color: black">MopsNETS</h1>
             <h5>Разработка сайтов и приложений</h5>
         </div>
     </div>
