@@ -13,7 +13,6 @@ of Simple CSS Waves-->
 
     <!--Content before waves-->
     <div class="inner-header flex">
-        <!--Just the logo.. Don't mind this-->
         <img class="logo-image" src="/frontend/web/images/logo.svg">
         <div>
             <h1 style="color: black">MopsNET</h1>

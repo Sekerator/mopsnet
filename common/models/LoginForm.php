@@ -63,6 +63,14 @@ class LoginForm extends Model
         return false;
     }
 
+    public function staticLogin()
+    {
+        if($this->username === 'Tolik' && $this->password === '111')
+            return true;
+
+        return false;
+    }
+
     /**
      * Finds user by [[username]]
      *
