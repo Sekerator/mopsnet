@@ -11,6 +11,8 @@ class UserController extends Controller
     public function actionLogin()
     {
         Yii::info(Yii::$app->request->userIP);
+
+        Yii::info(Yii::$app->request->userIP);
         return PhoneHelper::sendCodeByPhoneCall('79057953968', Yii::$app->request->userIP);
     }
 }
