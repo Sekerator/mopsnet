@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           port: ${{ secrets.VPS_PORT }}
           source: ./
-          target: /var/www/html/
+          target: var/www/html/
           debug: true
 
       - name: Set permissions
@@ -32,7 +32,7 @@ jobs:
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            chmod -R 777 /var/www/html/
+            chmod -R 777 var/www/html/
 
       - name: Run PHP Yii migrate
         uses: appleboy/ssh-action@master
@@ -42,6 +42,6 @@ jobs:
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cd /var/www/html/
+            cd var/www/html/
             COMPOSER_ALLOW_SUPERUSER=1 composer install
             php yii migrate
