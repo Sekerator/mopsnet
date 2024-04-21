@@ -15,7 +15,7 @@ of Simple CSS Waves-->
     <div class="inner-header flex">
         <img class="logo-image" src="/frontend/web/images/logo.svg">
         <div>
-            <h1 style="color: black">MopsNET</h1>
+            <h1 style="color: black">MopsNETSS</h1>
             <h5>Разработка сайтов и приложений</h5>
         </div>
     </div>
