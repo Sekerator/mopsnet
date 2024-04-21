@@ -22,16 +22,6 @@ jobs:
           source: "."
           target: "/var/www/html"
 
-      - name: Set permissions
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.VPS_PRIVATE_KEY }}
-          port: ${{ secrets.VPS_PORT }}
-          script: |
-            chmod -R 777 /var/www/html/
-
       - name: Install Composer dependencies
         uses: appleboy/ssh-action@master
         with:
