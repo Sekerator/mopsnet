@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           port: ${{ secrets.VPS_PORT }}
-          source: ./
+          source: ./var/www/
           target: /html/
           debug: true
 
