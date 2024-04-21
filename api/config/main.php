@@ -13,17 +13,21 @@ return [
     'controllerNamespace' => 'api\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-        'v1' => [
-            'basePath' => '@api/modules/v1',
-            'class' => 'api\modules\v1\Module'
-        ],
-        'magbat' => [
-            'basePath' => '@api/modules/magbat',
-            'class' => 'api\modules\magbat\Module'
-        ],
-        'tchat' => [
-            'basePath' => '@api/modules/tchat',
-            'class' => 'api\modules\tchat\Module'
+//        'v1' => [
+//            'basePath' => '@api/modules/v1',
+//            'class' => 'api\modules\v1\Module'
+//        ],
+//        'magbat' => [
+//            'basePath' => '@api/modules/magbat',
+//            'class' => 'api\modules\magbat\Module'
+//        ],
+//        'tchat' => [
+//            'basePath' => '@api/modules/tchat',
+//            'class' => 'api\modules\tchat\Module'
+//        ]
+        'magic-welt' => [
+            'basePath' => '@api/modules/magwelt',
+            'class' => 'api\modules\magwelt\Module'
         ]
     ],
     'components' => [        
