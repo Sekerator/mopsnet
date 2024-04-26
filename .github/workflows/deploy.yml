@@ -21,6 +21,7 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           source: "."
           target: "/var/www/html"
+          rm: true
 
       - name: Set permissions
         uses: appleboy/ssh-action@master
