@@ -52,4 +52,4 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             cd /var/www/html
-            php yii migrate -y
+            php yii migrate --interactive=0
