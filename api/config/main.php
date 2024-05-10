@@ -25,7 +25,7 @@ return [
 //            'basePath' => '@api/modules/tchat',
 //            'class' => 'api\modules\tchat\Module'
 //        ]
-        'magic-welt' => [
+        'magwelt' => [
             'basePath' => '@api/modules/magwelt',
             'class' => 'api\modules\magwelt\Module'
         ]
