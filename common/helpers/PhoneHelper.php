@@ -23,9 +23,34 @@ class PhoneHelper
                 ->setMethod('GET')
                 ->setUrl("https://sms.ru/code/call?phone=$phone&ip=$ip&api_id=" . Yii::$app->params['smsApiKey'])
                 ->send();
-        } catch (InvalidConfigException $e) {
+        } catch (InvalidConfigException|Exception $e) {
             return $e;
-        } catch (Exception $e) {
+        }
+
+        if ($response->isOk) {
+            return $response->data;
+        }
+
+        return null;
+    }
+
+    /**
+     * @param $phone
+     * @param $ip
+     * @param $message
+     * @return \Exception|mixed|InvalidConfigException|Exception|null
+     */
+    public static function sendCodeBySms($phone, $ip, $message)
+    {
+        $client = new Client();
+
+        try {
+            $message = str_replace(" ", "+", $message);
+            $response = $client->createRequest()
+                ->setMethod('GET')
+                ->setUrl("https://sms.ru/sms/send?to=$phone&ip=$ip&msg=$message&json=1&api_id=" . Yii::$app->params['smsApiKey'])
+                ->send();
+        } catch (InvalidConfigException|Exception $e) {
             return $e;
         }
 
