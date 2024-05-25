@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function beforeAction($action)
     {
-        if (Yii::$app->request->headers->get('token-mopsnet') !== Yii::$app->params['apiKey'] && YII_ENV_PROD)
+        if (Yii::$app->request->headers->get('token-mopsnet') !== Yii::$app->params['apiKey'])
             throw new ForbiddenHttpException('Invalid Authorization Token');
 
         return parent::beforeAction($action);
@@ -24,7 +24,7 @@ class UserController extends Controller
         $phone = Yii::$app->request->post('phone') ?? null;
 
         if ($phone === null)
-            return 'Invalid phone';
+            return 417;
 
         $model = MagweltUser::find()->where(['phone' => $phone])->andWhere(['status' => MagweltUser::STATUS_ACTIVE])->one();
 
@@ -40,19 +40,63 @@ class UserController extends Controller
             $codeSender = PhoneHelper::sendCodeByPhoneCall($phone, Yii::$app->request->userIP);
 
         if ($codeSender === null || $codeSender->status !== PhoneHelper::isOk)
-            return 'Error for code send';
+            return 417;
 
-//        if ($sendSms === null)
-//            $code = $codeSender->code;
+        if ($sendSms === null)
+            $code = $codeSender->code;
 
-        $model->code;
+        $model->code = $code;
 
-        return PhoneHelper::sendCodeBySms('79057953968', '213.209.148.7', 'Ваш код: 1234');
+        if ($model->save())
+            return $code;
+
+        return 417;
     }
 
-    public function actionTest()
+    public function actionCheckCode()
     {
-        return 'test';
+        $code = Yii::$app->request->post('code') ?? null;
+        $phone = Yii::$app->request->post('phone') ?? null;
+
+        if ($phone === null || $code === null)
+            return 417;
+
+        $model = MagweltUser::find()->where(['phone' => $phone])->andWhere(['status' => MagweltUser::STATUS_ACTIVE])->one();
+
+        if ($model === null)
+            return 417;
+
+        $model->login_attempt += 1;
+
+        if ($model->code === $code) {
+            $model->auth_token = Yii::$app->security->generateRandomString();
+
+            if ($model->save())
+                return $model;
+        }
+
+        $model->save();
+
+        return 417;
+    }
+
+    public function actionLoginWithToken()
+    {
+        $token = Yii::$app->request->post('token') ?? null;
+        $phone = Yii::$app->request->post('phone') ?? null;
+
+        if ($phone === null || $token === null)
+            return 417;
+
+        $model = MagweltUser::find()->where(['phone' => $phone])
+            ->andWhere(['auth_token' => $token])
+            ->andWhere(['status' => MagweltUser::STATUS_ACTIVE])
+            ->one();
+
+        if ($model === null)
+            return 417;
+
+        return $model;
     }
 }
 

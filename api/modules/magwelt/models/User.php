@@ -11,6 +11,7 @@ class User extends MagweltUser
         return [
             'username',
             'phone',
+            'auth_token',
             'created_at',
         ];
     }

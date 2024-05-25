@@ -14,8 +14,8 @@ use yii\db\BaseActiveRecord;
  * @property string $phone
  * @property string|null $auth_token
  * @property int|null $code
- * @property int|null $login_attempt
- * @property int|null $status
+ * @property int $login_attempt
+ * @property int $status
  * @property string|null $created_at
  *
  * @property MagweltProfile[] $magweltProfiles

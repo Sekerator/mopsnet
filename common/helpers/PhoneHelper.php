@@ -31,7 +31,7 @@ class PhoneHelper
         }
 
         if ($response->isOk) {
-            return $response->data;
+            return (object)$response->data;
         }
 
         return null;
@@ -58,7 +58,9 @@ class PhoneHelper
         }
 
         if ($response->isOk) {
-            return $response->data;
+            $data = (object)$response->data;
+            foreach ($data->sms as $item)
+                return (object)$item;
         }
 
         return null;
