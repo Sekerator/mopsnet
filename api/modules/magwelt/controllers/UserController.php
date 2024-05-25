@@ -6,16 +6,14 @@ use common\models\magwelt\MagweltUser;
 use Yii;
 use common\helpers\PhoneHelper;
 use yii\rest\Controller;
+use yii\web\ForbiddenHttpException;
 
 class UserController extends Controller
 {
     public function beforeAction($action)
     {
-        if (!Yii::$app->request->headers->has('token-mopsnet'))
-            return 'Not has token';
-
-        if (Yii::$app->request->headers->get('token-mopsnet') !== Yii::$app->params['apiKey'])
-            return 'Token is invalid';
+        if (Yii::$app->request->headers->get('token-mopsnet') !== Yii::$app->params['apiKey'] && YII_ENV_PROD)
+            throw new ForbiddenHttpException('Invalid Authorization Token');
 
         return parent::beforeAction($action);
     }
