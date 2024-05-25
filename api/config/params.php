@@ -1,6 +1,9 @@
 <?php
 return [
     'adminEmail' => 'mopsnet@mopsnet.ru',
+
+    'apiKey' => '0nazanJBYOxLN4WKyOqPcdSeg.PkWyWroxW2ZaWI0aWO2iuGzk',
+
     'chatGptApiKey' => 'sk-proj-c0p29fjsOWjf3oiGMmbdT3BlbkFJUhLELNZ2c2GKYP6oAwOI',
     'smsApiKey' => 'A9D9768A-C528-31DF-987F-09B0F6129DBF',
 

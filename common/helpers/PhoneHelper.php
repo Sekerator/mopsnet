@@ -9,6 +9,9 @@ use yii\httpclient\Exception;
 
 class PhoneHelper
 {
+    public const isOk = "OK";
+    public const isError = "ERROR";
+
     /**
      * @param $phone
      * @param $ip
