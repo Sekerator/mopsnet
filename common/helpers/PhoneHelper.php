@@ -17,7 +17,7 @@ class PhoneHelper
      * @param $ip
      * @return \Exception|mixed|InvalidConfigException|Exception|null
      */
-    public static function sendCodeByPhoneCall($phone, $ip)
+    public static function sendCodeByPhoneCall($phone, $ip): ?object
     {
         $client = new Client();
 
@@ -43,7 +43,7 @@ class PhoneHelper
      * @param $message
      * @return \Exception|mixed|InvalidConfigException|Exception|null
      */
-    public static function sendCodeBySms($phone, $ip, $message)
+    public static function sendCodeBySms($phone, $ip, $message): ?object
     {
         $client = new Client();
 
@@ -64,5 +64,10 @@ class PhoneHelper
         }
 
         return null;
+    }
+
+    public static function getCode($item)
+    {
+        return $item->code;
     }
 }

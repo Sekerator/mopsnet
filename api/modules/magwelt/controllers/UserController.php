@@ -43,7 +43,7 @@ class UserController extends Controller
             return 417;
 
         if ($sendSms === null)
-            $code = $codeSender->code;
+            $code = PhoneHelper::getCode($codeSender);
 
         $model->code = $code;
 
