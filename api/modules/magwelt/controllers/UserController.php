@@ -11,6 +11,9 @@ class UserController extends Controller
 {
     public function beforeAction($action)
     {
+        if (!Yii::$app->request->headers->has('token-mopsnet'))
+            return 'Not has token';
+
         if (Yii::$app->request->headers->get('token-mopsnet') !== Yii::$app->params['apiKey'])
             return 'Token is invalid';
 
