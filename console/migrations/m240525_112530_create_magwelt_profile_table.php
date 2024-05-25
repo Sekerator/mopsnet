@@ -14,8 +14,6 @@ class m240525_112530_create_magwelt_profile_table extends Migration
             'user_id' => $this->integer()->notNull(),
             'class_id' => $this->integer()->notNull(),
             'race_id' => $this->integer()->notNull(),
-            'characteristic_id' => $this->integer()->notNull(),
-            'history' => $this->text(),
         ]);
 
         $this->createIndex(
@@ -62,21 +60,6 @@ class m240525_112530_create_magwelt_profile_table extends Migration
             'id',
             'CASCADE'
         );
-
-        $this->createIndex(
-            'idx-magwelt_profile-characteristic_id',
-            'magwelt_profile',
-            'characteristic_id'
-        );
-
-        $this->addForeignKey(
-            'fk-magwelt_profile-characteristic_id',
-            'magwelt_profile',
-            'characteristic_id',
-            'magwelt_characteristic',
-            'id',
-            'CASCADE'
-        );
     }
 
     public function safeDown()
@@ -93,11 +76,6 @@ class m240525_112530_create_magwelt_profile_table extends Migration
 
         $this->dropForeignKey(
             'fk-magwelt_profile-race_id',
-            'magwelt_profile'
-        );
-
-        $this->dropForeignKey(
-            'fk-magwelt_profile-characteristic_id',
             'magwelt_profile'
         );
 
