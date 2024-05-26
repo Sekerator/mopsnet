@@ -80,7 +80,12 @@ class UserController extends Controller
 
         $model->save();
 
-        return ['error' => 'Code not true or model not saving', $code, $model->errors];
+        return [
+            'error' => 'Code not true or model not saving',
+            'model-code' => $model->code,
+            'sended-code' => $code,
+            'model-errors' => $model->errors
+        ];
     }
 
     public function actionLoginWithToken()
