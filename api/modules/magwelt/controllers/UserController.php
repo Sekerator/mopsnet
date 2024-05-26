@@ -28,10 +28,12 @@ class UserController extends Controller
             return ['error' => 'Invalid phone number'];
 
         $model = MagweltUser::find()->where(['phone' => $phone])->andWhere(['status' => MagweltUser::STATUS_ACTIVE])->one();
+        $countModels = MagweltUser::find()->count();
 
         if ($model === null) {
             $model = new MagweltUser();
             $model->phone = $phone;
+            $model->username = 'Player' . $countModels++;
         }
 
         if ($sendSms !== null) {
