@@ -73,6 +73,7 @@ class UserController extends Controller
 
         if ($model->code == $code) {
             $model->auth_token = Yii::$app->security->generateRandomString();
+            $model->login_attempt = 0;
 
             if ($model->save())
                 return $model;
