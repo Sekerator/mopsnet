@@ -68,6 +68,9 @@ class PhoneHelper
 
     public static function getCode($item)
     {
+        if($item === null)
+            return null;
+
         return $item->code;
     }
 }
