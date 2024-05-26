@@ -68,7 +68,7 @@ class PhoneHelper
 
     public static function getCode($item)
     {
-        if($item === null)
+        if($item === null || $item->status !== self::isOk)
             return null;
 
         return $item->code;
