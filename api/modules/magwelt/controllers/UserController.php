@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function beforeAction($action)
     {
-        if (Yii::$app->request->headers->get('token-mopsnet') !== Yii::$app->params['apiKey'])
+        if (Yii::$app->request->headers->get('Token-mopsnet') !== Yii::$app->params['apiKey'])
             throw new ForbiddenHttpException('Invalid Authorization Token');
 
         return parent::beforeAction($action);
@@ -36,19 +36,18 @@ class UserController extends Controller
         if ($sendSms !== null) {
             $code = rand(1000, 9999);
             $codeSender = PhoneHelper::sendCodeBySms($phone, Yii::$app->request->userIP, $code);
-        } else
+        } else {
             $codeSender = PhoneHelper::sendCodeByPhoneCall($phone, Yii::$app->request->userIP);
+            $code = PhoneHelper::getCode($codeSender);
+        }
 
         if ($codeSender === null || $codeSender->status !== PhoneHelper::isOk)
             return 417;
 
-        if ($sendSms === null)
-            $code = PhoneHelper::getCode($codeSender);
-
         $model->code = $code;
 
         if ($model->save())
-            return $code;
+            return true;
 
         return 417;
     }

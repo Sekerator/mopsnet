@@ -12,7 +12,6 @@ class User extends MagweltUser
             'username',
             'phone',
             'auth_token',
-            'created_at',
         ];
     }
 }
