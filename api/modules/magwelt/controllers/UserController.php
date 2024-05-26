@@ -50,7 +50,7 @@ class UserController extends Controller
         if ($model->save())
             return true;
 
-        return ['error' => 'Error model saving'];;
+        return ['error' => 'Error model saving', $model->errors];;
     }
 
     public function actionCheckCode()
