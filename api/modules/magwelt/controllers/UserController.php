@@ -20,8 +20,9 @@ class UserController extends Controller
 
     public function actionLogin()
     {
-        $sendSms = Yii::$app->request->post('sms') ?? null;
-        $phone = Yii::$app->request->post('phone') ?? null;
+        $json = json_decode(Yii::$app->request->getRawBody());
+        $sendSms = $json->sms ?? null;
+        $phone = $json->phone ?? null;
 
         if ($phone === null)
             return 417;
@@ -54,8 +55,9 @@ class UserController extends Controller
 
     public function actionCheckCode()
     {
-        $code = Yii::$app->request->post('code') ?? null;
-        $phone = Yii::$app->request->post('phone') ?? null;
+        $json = json_decode(Yii::$app->request->getRawBody());
+        $code = $json->code ?? null;
+        $phone = $json->phone ?? null;
 
         if ($phone === null || $code === null)
             return 417;
@@ -81,8 +83,9 @@ class UserController extends Controller
 
     public function actionLoginWithToken()
     {
-        $token = Yii::$app->request->post('token') ?? null;
-        $phone = Yii::$app->request->post('phone') ?? null;
+        $json = json_decode(Yii::$app->request->getRawBody());
+        $token = $json->token ?? null;
+        $phone = $json->phone ?? null;
 
         if ($phone === null || $token === null)
             return 417;
