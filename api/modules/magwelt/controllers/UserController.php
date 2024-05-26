@@ -25,7 +25,7 @@ class UserController extends Controller
         $phone = $json->phone ?? null;
 
         if ($phone === null)
-            return 417;
+            return ['error' => 'Invalid phone number'];
 
         $model = MagweltUser::find()->where(['phone' => $phone])->andWhere(['status' => MagweltUser::STATUS_ACTIVE])->one();
 
@@ -43,14 +43,14 @@ class UserController extends Controller
         }
 
         if ($codeSender === null || $codeSender->status !== PhoneHelper::isOk)
-            return 417;
+            return ['error' => 'Error sending SMS or phone call failed'];
 
         $model->code = $code;
 
         if ($model->save())
             return true;
 
-        return 417;
+        return ['error' => 'Error model saving'];;
     }
 
     public function actionCheckCode()
@@ -60,12 +60,12 @@ class UserController extends Controller
         $phone = $json->phone ?? null;
 
         if ($phone === null || $code === null)
-            return 417;
+            return ['error' => 'Invalid phone or code'];
 
         $model = MagweltUser::find()->where(['phone' => $phone])->andWhere(['status' => MagweltUser::STATUS_ACTIVE])->one();
 
         if ($model === null)
-            return 417;
+            return ['error' => 'User not found'];
 
         $model->login_attempt += 1;
 
@@ -78,7 +78,7 @@ class UserController extends Controller
 
         $model->save();
 
-        return 417;
+        return ['error' => 'Code not true or model not saving'];
     }
 
     public function actionLoginWithToken()
@@ -88,7 +88,7 @@ class UserController extends Controller
         $phone = $json->phone ?? null;
 
         if ($phone === null || $token === null)
-            return 417;
+            return ['error' => 'Invalid phone number or token'];
 
         $model = MagweltUser::find()->where(['phone' => $phone])
             ->andWhere(['auth_token' => $token])
@@ -96,7 +96,7 @@ class UserController extends Controller
             ->one();
 
         if ($model === null)
-            return 417;
+            return ['error' => 'User not found'];
 
         return $model;
     }
