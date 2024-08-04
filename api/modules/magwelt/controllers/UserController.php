@@ -2,8 +2,8 @@
 
 namespace api\modules\magwelt\controllers;
 
-use common\models\magwelt\MagweltUser;
 use Yii;
+use common\models\magwelt\MagweltUser;
 use common\helpers\PhoneHelper;
 use yii\rest\Controller;
 use yii\web\ForbiddenHttpException;
@@ -27,13 +27,11 @@ class UserController extends Controller
         if ($phone === null)
             return ['error' => 'Invalid phone number'];
 
-        $model = MagweltUser::find()->where(['phone' => $phone])->andWhere(['status' => MagweltUser::STATUS_ACTIVE])->one();
-        $countModels = MagweltUser::find()->count();
+        $model = MagweltUser::findForPhone($phone);
 
         if ($model === null) {
             $model = new MagweltUser();
             $model->phone = $phone;
-            $model->username = 'Player' . $countModels++;
         }
 
         if ($sendSms !== null) {
@@ -64,7 +62,7 @@ class UserController extends Controller
         if ($phone === null || $code === null)
             return ['error' => 'Invalid phone or code'];
 
-        $model = MagweltUser::find()->where(['phone' => $phone])->andWhere(['status' => MagweltUser::STATUS_ACTIVE])->one();
+        $model = MagweltUser::findForPhone($phone);
 
         if ($model === null)
             return ['error' => 'User not found'];

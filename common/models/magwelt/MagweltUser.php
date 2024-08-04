@@ -87,4 +87,9 @@ class MagweltUser extends \yii\db\ActiveRecord
     {
         return $this->hasMany(MagweltProfile::class, ['user_id' => 'id']);
     }
+
+    public static function findForPhone($phone)
+    {
+        return self::findOne(['phone' => $phone, 'status' => self::STATUS_ACTIVE]);
+    }
 }
