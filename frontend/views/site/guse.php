@@ -1,3 +1,4 @@
+<?php $this->title = 'Guse' ?>
 <div></div>
 <style>
     div {
