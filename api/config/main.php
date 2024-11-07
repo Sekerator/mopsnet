@@ -13,10 +13,10 @@ return [
     'controllerNamespace' => 'api\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-//        'v1' => [
-//            'basePath' => '@api/modules/v1',
-//            'class' => 'api\modules\v1\Module'
-//        ],
+        'v1' => [
+            'basePath' => '@api/modules/v1',
+            'class' => 'api\modules\v1\Module'
+        ],
 //        'magbat' => [
 //            'basePath' => '@api/modules/magbat',
 //            'class' => 'api\modules\magbat\Module'
