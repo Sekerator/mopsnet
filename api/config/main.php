@@ -30,10 +30,11 @@ return [
             'class' => 'api\modules\magwelt\Module'
         ]
     ],
-    'components' => [        
+    'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => false,
+            'enableSession' => false,
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
