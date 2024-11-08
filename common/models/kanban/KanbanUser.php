@@ -3,6 +3,8 @@
 namespace common\models\kanban;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\BaseActiveRecord;
 use yii\web\IdentityInterface;
 use yii\db\ActiveRecord;
 
@@ -26,6 +28,19 @@ class KanbanUser extends ActiveRecord implements IdentityInterface
     public static function tableName()
     {
         return 'kanban_user';
+    }
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    BaseActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+                    BaseActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+                ],
+            ],
+        ];
     }
 
     /**

@@ -3,6 +3,8 @@
 namespace common\models\kanban;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\BaseActiveRecord;
 
 /**
  * This is the model class for table "kanban_task".
@@ -26,6 +28,19 @@ class KanbanTask extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'kanban_task';
+    }
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    BaseActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+                    BaseActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+                ],
+            ],
+        ];
     }
 
     /**
