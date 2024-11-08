@@ -16,7 +16,7 @@ class Module extends \yii\base\Module
         $behaviors['authenticator'] = [
             'class' => HttpBearerAuth::class,
             'user' => Yii::$app->kanbanUser,
-            'except' => ['login']
+            'except' => ['user/login']
         ];
 
         return $behaviors;

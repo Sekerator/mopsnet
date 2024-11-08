@@ -3,6 +3,8 @@
 namespace common\models\kanban;
 
 use Yii;
+use yii\web\IdentityInterface;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "kanban_user".
@@ -16,7 +18,7 @@ use Yii;
  * @property int|null $created_at
  * @property int|null $updated_at
  */
-class KanbanUser extends \yii\db\ActiveRecord
+class KanbanUser extends ActiveRecord implements IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -57,8 +59,48 @@ class KanbanUser extends \yii\db\ActiveRecord
         ];
     }
 
-    public static function findIdentityByAccessToken($token, $type = null): ?KanbanUser
+    public function getId()
+    {
+        return $this->getPrimaryKey();
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
     {
         return static::findOne(['auth_key' => $token]);
+    }
+
+    public static function findIdentity($id)
+    {
+        return static::findOne(['id' => $id]);
+    }
+
+    public function getAuthKey()
+    {
+        return $this->auth_key;
+    }
+
+    public function validateAuthKey($authKey)
+    {
+        return $this->getAuthKey() === $authKey;
+    }
+
+    public function generateAuthKey()
+    {
+        $this->auth_key = Yii::$app->security->generateRandomString();
+    }
+
+    public function generatePasswordResetToken()
+    {
+        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();
+    }
+
+    public function setPassword($password)
+    {
+        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+    }
+
+    public function validatePassword($password)
+    {
+        return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 }

@@ -24,11 +24,13 @@ return [
     ],
     'components' => [
         'user' => [
+            'class' => 'yii\web\User',
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => false,
             'enableSession' => false,
         ],
         'kanbanUser' => [
+            'class' => 'yii\web\User',
             'identityClass' => 'common\models\kanban\KanbanUser',
             'enableAutoLogin' => false,
             'enableSession' => false,
