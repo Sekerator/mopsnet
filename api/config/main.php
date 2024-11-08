@@ -17,22 +17,19 @@ return [
             'basePath' => '@api/modules/v1',
             'class' => 'api\modules\v1\Module'
         ],
-//        'magbat' => [
-//            'basePath' => '@api/modules/magbat',
-//            'class' => 'api\modules\magbat\Module'
-//        ],
-//        'tchat' => [
-//            'basePath' => '@api/modules/tchat',
-//            'class' => 'api\modules\tchat\Module'
-//        ]
-        'magwelt' => [
-            'basePath' => '@api/modules/magwelt',
-            'class' => 'api\modules\magwelt\Module'
+        'kanban' => [
+            'basePath' => '@api/modules/kanban',
+            'class' => 'api\modules\kanban\Module'
         ]
     ],
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
+            'enableAutoLogin' => false,
+            'enableSession' => false,
+        ],
+        'kanbanUser' => [
+            'identityClass' => 'common\models\kanban\KanbanUser',
             'enableAutoLogin' => false,
             'enableSession' => false,
         ],

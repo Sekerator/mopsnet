@@ -1,25 +1,25 @@
 <?php
 
-namespace common\models\magbat;
+namespace common\models\kanban;
 
 use Yii;
 
 /**
- * This is the model class for table "magbat_magic_type".
+ * This is the model class for table "kanban_tag".
  *
  * @property int $id
  * @property string $title
  *
- * @property MagbatMagic[] $magbatMagics
+ * @property KanbanTaskTag[] $kanbanTaskTags
  */
-class MagbatMagicType extends \yii\db\ActiveRecord
+class KanbanTag extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'magbat_magic_type';
+        return 'kanban_tag';
     }
 
     /**
@@ -45,12 +45,12 @@ class MagbatMagicType extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[MagbatMagics]].
+     * Gets query for [[KanbanTaskTags]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getMagbatMagics()
+    public function getKanbanTaskTags()
     {
-        return $this->hasMany(MagbatMagic::class, ['type_id' => 'id']);
+        return $this->hasMany(KanbanTaskTag::class, ['tag_id' => 'id']);
     }
 }
