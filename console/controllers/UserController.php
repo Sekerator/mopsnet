@@ -1,9 +1,9 @@
 <?php
-
 namespace console\controllers;
+
+use Yii;
 use common\models\User;
 use yii\console\Controller;
-use yii\helpers\Console;
 
 class UserController extends Controller
 {
