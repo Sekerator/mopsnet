@@ -31,7 +31,6 @@ class UserController extends Controller
             $user->username = $username;
             $user->email = $email;
             $user->setPassword($password);
-            $user->generateAuthKey();
             if (!$user->save())
                 return ['code' => 417, 'error' => 'User not saved'];
         }

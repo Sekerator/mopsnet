@@ -10,7 +10,7 @@ class User extends KanbanUser
         return [
             'username',
             'email',
-            'auth_token',
+            'auth_key',
             'created_at'
         ];
     }
