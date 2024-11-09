@@ -20,8 +20,7 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
       "ext-json": "*",
         "workerman/workerman": "^4.1",
-        "yiisoft/yii2-httpclient": "^2.0",
-        "yiisoft/yii2-apidoc": "~3.0.6"
+        "yiisoft/yii2-httpclient": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -32,8 +31,7 @@
         "codeception/module-yii2": "^1.0",
         "codeception/module-filesystem": "^1.0",
         "codeception/verify": "~0.5.0 || ~1.1.0",
-        "symfony/browser-kit": ">=2.7 <=4.2.4",
-        "cebe/markdown": "~1.0.0"
+        "symfony/browser-kit": ">=2.7 <=4.2.4"
     },
     "config": {
         "process-timeout": 1800,
